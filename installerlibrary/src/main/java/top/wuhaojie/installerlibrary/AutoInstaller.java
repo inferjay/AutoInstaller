@@ -147,6 +147,7 @@ public class AutoInstaller extends Handler {
 
     private void toAccessibilityService() {
         Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(intent);
     }
 
